@@ -1,0 +1,9 @@
+{%extends 'todo/base.html'}%
+
+{%block bb%}
+<form action="/todos/create",method="post">
+    <input type="text" name="title"/>
+    <input type="date" name="deadline"/>
+    <input type="submit" value="Submit"/>
+</form>
+{%endblock%}
