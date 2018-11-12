@@ -1,0 +1,11 @@
+{%extends 'todo/base.html'%}
+
+{%block bb%}
+<form action="/todos/{{todo.id}}/update/" method="POST">
+    {%csrf_token%}
+    <input type="text" name="title" value="{{todo.title}}"/>
+    <input type="date" name="deadline" value="{{deadline}}"/>
+    <input type="submit" value="Submit"/>
+    
+</form>
+{%endblock%}
